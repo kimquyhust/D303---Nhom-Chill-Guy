@@ -11,6 +11,8 @@
 | Vai trò chính   | Data Agent — Customer & Order/Product      |
 | Ngày hoàn thành | 2026-08-05                                 |
 
+
+
 ## 2. Vai trò và phạm vi công việc
 
 ### Phần việc sở hữu
@@ -54,6 +56,8 @@ bạch order lịch sử (chỉ để tham chiếu) với order đang khiếu n�
 `affected_entities`).
 
 ### Cách triển khai
+
+
 
 - **Identity**: `orders.customer_id → customers.customer_unique_id`. Lịch sử lấy
   bằng cách gom toàn bộ order có cùng `customer_unique_id`, loại chính order đang
