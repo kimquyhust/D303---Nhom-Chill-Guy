@@ -79,7 +79,7 @@ POLICY_SYSTEM = (
 class PolicyAgent(Agent):
     name = "policy_agent"
 
-    # -------------------------------------------------- deterministic engine #
+    # deterministic engine #
     @staticmethod
     def _rule_primary(facts: dict) -> str:
         if facts["order_status"] == "canceled" and facts["paid"]:
@@ -94,7 +94,7 @@ class PolicyAgent(Agent):
             return "valid_split_payment"
         return "unsupported_late_claim"
 
-    # ------------------------------------------------------------ LLM branch #
+    
     def _llm_primary(self, case_id: str, facts: dict):
         user = (
             "FACTS (all values computed by deterministic tools):\n"
@@ -122,7 +122,7 @@ class PolicyAgent(Agent):
         return {"primary": primary, "confidence": conf,
                 "reason": str(data.get("reason", "")).strip()}
 
-    # ------------------------------------------------------------------ run #
+    
     def run(self, case_id, order_id, order, customer, op, pay, delivery) -> dict:
         self.tracer.log(case_id, self.name, "dispatch", order_id=order_id)
 
@@ -162,7 +162,7 @@ class PolicyAgent(Agent):
 
         # Confidence is a DETERMINISTIC, calibrated value per issue type — the
         # model's raw confidence (often a flat 1.0 from small models) is noise and
-        # is kept only in the trace, not in the graded output.
+       
         confidence = CONFIDENCE[primary]
 
         self.tracer.log(case_id, self.name, "decision", primary=primary,
@@ -170,7 +170,7 @@ class PolicyAgent(Agent):
                         rule_agreement=agree, confidence=confidence,
                         llm_confidence=llm_conf)
 
-        # ---- derive mechanical consequences from the chosen primary_issue --- #
+        #  derive mechanical consequences from the chosen primary_issue --- #
         late_sellers = delivery["late_handoff_seller_ids"]
         if primary in ("canceled_order_paid", "unavailable_order_paid"):
             refund = payment_total

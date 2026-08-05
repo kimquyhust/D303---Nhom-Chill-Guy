@@ -41,7 +41,7 @@ class LLMClient:
         self._last_call = 0.0
         self._available = self._probe() if self.cfg.provider != "deterministic" else False
 
-    # ------------------------------------------------------------- probing #
+    # probing #
     def _probe(self) -> bool:
         try:
             import requests  # noqa
@@ -66,7 +66,7 @@ class LLMClient:
     def active_model(self) -> str:
         return self.cfg.model if self.active_mode == "neural" else "rule-based-reasoner"
 
-    # ------------------------------------------------------------- calling #
+    # calling #
     def assess(self, system: str, user: str, fallback_text: str,
                fallback_conf: float) -> LLMResult:
         """Ask the model for {rationale, confidence}. Falls back to rule-based."""

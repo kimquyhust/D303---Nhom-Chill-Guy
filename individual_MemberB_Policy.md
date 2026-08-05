@@ -5,8 +5,8 @@
 
 | Thông tin       | Nội dung                        |
 | --------------- | ------------------------------- |
-| Họ và tên       | [Họ và tên]                     |
-| MSSV            | [MSSV]                           |
+| Họ và tên       | Nguyễn Minh Đạt                     |
+| MSSV            | 2A202601810                        |
 | Khóa/Lớp        | K4                               |
 | Vai trò chính   | Policy / Business-Rules Agent    |
 | Ngày hoàn thành | 2026-08-05                       |
@@ -113,5 +113,5 @@ python run.py --only EC_002 EC_022 EC_012
 - [x] Không secret.
 - [x] Không sao chép nguyên văn.
 
-**Họ và tên:** [Họ và tên]
+**Họ và tên:** Nguyễn Minh Đạt  
 **Ngày xác nhận:** 2026-08-05
