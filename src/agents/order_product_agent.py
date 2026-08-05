@@ -18,7 +18,7 @@ class OrderProductAgent(Agent):
             system="You audit order composition (items, sellers, products, categories).",
             user=f"Order {order_id}: {finding['n_items']} item(s), "
                  f"{len(finding['seller_ids'])} seller(s), "
-                 f"{len(finding['category_names'])} categorie(s).",
+                 f"{len(finding['category_names'])} distinct category value(s).",
             fallback_text=(
                 f"Joined order_items -> products/sellers: {finding['n_items']} items, "
                 f"{len(finding['seller_ids'])} sellers. Empty arrays when no item row."

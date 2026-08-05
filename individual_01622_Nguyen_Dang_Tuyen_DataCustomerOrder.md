@@ -5,8 +5,8 @@
 
 | Thông tin       | Nội dung                                  |
 | --------------- | ----------------------------------------- |
-| Họ và tên       | [Họ và tên của bạn]                       |
-| MSSV            | [MSSV]                                     |
+| Họ và tên       | Nguyễn Đăng Tuyên                    |
+| MSSV            | 2A202601622                                     |
 | Khóa/Lớp        | K4                                         |
 | Vai trò chính   | Data Agent — Customer & Order/Product      |
 | Ngày hoàn thành | 2026-08-05                                 |
@@ -140,5 +140,5 @@ python3 -c "import json;o=json.load(open('output/EC_012.json'));print(o['affecte
 - [x] Báo cáo không chứa `.env`, API key, token hoặc secret.
 - [x] Báo cáo này không phải bản sao nguyên văn của báo cáo nhóm/thành viên khác.
 
-**Họ và tên:** [Họ và tên của bạn]
+**Họ và tên:** Nguyễn Đăng Tuyên
 **Ngày xác nhận:** 2026-08-05
