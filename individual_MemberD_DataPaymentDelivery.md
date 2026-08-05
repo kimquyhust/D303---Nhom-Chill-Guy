@@ -5,8 +5,8 @@
 
 | Thông tin       | Nội dung                                 |
 | --------------- | ---------------------------------------- |
-| Họ và tên       | [Họ và tên]                              |
-| MSSV            | [MSSV]                                    |
+| Họ và tên       | Nguyễn Văn Quân                           |
+| MSSV            | 2A202601544                               |
 | Khóa/Lớp        | K4                                        |
 | Vai trò chính   | Data Agent — Payment & Delivery           |
 | Ngày hoàn thành | 2026-08-05                                |
@@ -107,5 +107,5 @@ python3 -c "import json;o=json.load(open('output/EC_002.json'));print(o['deliver
 - [x] Không secret.
 - [x] Không sao chép nguyên văn.
 
-**Họ và tên:** [Họ và tên]
+**Họ và tên:** Nguyễn Văn Quân
 **Ngày xác nhận:** 2026-08-05
