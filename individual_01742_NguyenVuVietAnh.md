@@ -5,11 +5,11 @@
 
 | Thông tin       | Nội dung                                |
 | --------------- | --------------------------------------- |
-| Họ và tên       | [Họ và tên]                             |
-| MSSV            | [MSSV]                                   |
-| Khóa/Lớp        | K4                                       |
-| Vai trò chính   | Verifier / QA / Submission Lead          |
-| Ngày hoàn thành | 2026-08-05                               |
+| Họ và tên       | Nguyễn Vũ Việt Anh                      |
+| MSSV            | 2A202601742                             |
+| Khóa/Lớp        | K4 / D303                               |
+| Vai trò chính   | Verifier / QA / Submission Lead         |
+| Ngày hoàn thành | 2026-08-05                              |
 
 ## 2. Vai trò và phạm vi công việc
 
@@ -107,5 +107,5 @@ python3 -c "import json;print(sum(1 for l in open('logging/trace.jsonl') if json
 - [x] Không secret.
 - [x] Không sao chép nguyên văn.
 
-**Họ và tên:** [Họ và tên]
+**Họ và tên:** Nguyễn Vũ Việt Anh
 **Ngày xác nhận:** 2026-08-05
