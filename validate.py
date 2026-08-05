@@ -262,7 +262,7 @@ def main():
     print("=" * 60)
     allpass = (report["count"] == 50 and not report["schema"] and not report["grounding"]
                and not report["policy"] and trace_ok and not report["handoff"])
-    print("RESULT:", "ALL CHECKS PASS ✅" if allpass else "FAILURES PRESENT ❌")
+    print("RESULT:", "ALL CHECKS PASS" if allpass else "FAILURES PRESENT")
     return 0 if allpass else 1
 
 

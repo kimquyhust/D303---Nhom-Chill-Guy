@@ -6,22 +6,22 @@
   "parameter_size": "8B",
   "parameter_constraint": "<=10B per agent (lab rule #1)",
   "framework": "custom-python-multiagent",
-  "provider": "openai",
-  "reasoning_mode": "neural",
+  "provider": "deterministic",
+  "reasoning_mode": "rule_based",
   "decision_ownership": "LLM decides primary_issue via EC_POLICY_V2 reasoning over a tool-built fact sheet; tools supply all exact numbers/ids; consequences derived mechanically; deterministic rule engine used as fallback + guardrail.",
   "policy_decision_sources": {
-    "llm": 50,
-    "rule_fallback": 0,
+    "llm": 0,
+    "rule_fallback": 50,
     "guardrail": 0
   },
   "llm_vs_rule_disagreements": 0,
-  "policy_guardrail_enforced": true,
+  "policy_guardrail_enforced": false,
   "runtime": {
-    "python": "3.9.6",
-    "platform": "macOS-15.6-arm64-arm-64bit",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
     "cases": 50,
-    "elapsed_seconds": 167.96,
-    "timestamp": "2026-08-05 17:36:03"
+    "elapsed_seconds": 0.186,
+    "timestamp": "2026-08-05 19:57:21"
   },
   "agents": [
     "coordinator",
