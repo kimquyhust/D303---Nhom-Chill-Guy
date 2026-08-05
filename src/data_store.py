@@ -15,7 +15,12 @@ from typing import Optional
 
 import pandas as pd
 
-from .config import PATHS, ROUND_DP, USE_ENGLISH_CATEGORY
+from .config import (
+    PATHS,
+    RECONCILE_TOLERANCE_BRL,
+    ROUND_DP,
+    USE_ENGLISH_CATEGORY,
+)
 
 TS_FMT = "%Y-%m-%d %H:%M:%S"
 
@@ -24,7 +29,8 @@ def round2(value: Optional[float]) -> Optional[float]:
     """Round-half-up to 2 dp, normalising -0.0 -> 0.0. None passes through."""
     if value is None:
         return None
-    q = Decimal(str(value)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    quantum = Decimal(1).scaleb(-ROUND_DP)
+    q = Decimal(str(value)).quantize(quantum, rounding=ROUND_HALF_UP)
     f = float(q)
     return 0.0 if f == 0.0 else f
 
@@ -186,7 +192,7 @@ class DataStore:
         else:
             expected = round2((item_total or 0.0) + (freight_total or 0.0))
             difference = round2(payment_total - expected)
-            reconciled = abs(difference) <= 0.10
+            reconciled = abs(difference) <= RECONCILE_TOLERANCE_BRL
         return {
             "n_payments": n,
             "payment_ids": payment_ids,
