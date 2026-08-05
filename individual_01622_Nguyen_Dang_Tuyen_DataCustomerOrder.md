@@ -13,6 +13,7 @@
 
 ## 2. Vai trò và phạm vi công việc
 
+
 ### Phần việc sở hữu
 
 | Module/deliverable | File/hàm phụ trách | Input nhận vào | Output bàn giao | Trạng thái |
@@ -33,6 +34,9 @@ multiple_categories).
 | Tổng hợp bảng phân bố 50 case | Coordinator/Policy | 8/6/10/10/8/8 theo primary issue, khớp status distribution |
 
 ## 3. Kết quả theo vai trò
+
+
+
 
 | Nhiệm vụ | File/artifact | Kết quả bàn giao | Cách xác minh |
 | -------- | ------------- | ---------------- | ------------- |
